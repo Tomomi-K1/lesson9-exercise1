@@ -7,3 +7,21 @@ const currentlyReading = {
   currentChapter: 8,
   totalChapters: 23
 };
+
+//using dot notation
+console.log(currentlyReading.title);
+//using bracket notation
+console.log(currentlyReading["pages"]);
+//adding new property to object
+currentlyReading.awards = "Hugo Award for Best Novel(2016)";
+
+console.log(currentlyReading);
+
+//adding new property (function) to object
+currentlyReading.updateChapter = function (chapterNum) {
+  this.currentChapter = chapterNum;
+};
+
+//editing the property value
+currentlyReading.updateChapter(11);
+console.log(currentlyReading.currentChapter);
